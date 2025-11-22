@@ -17,7 +17,7 @@ function EmployeeProfile() {
 
   useEffect(() => {
     axios
-      .get(`https://my-employees-django-2025.onrender.com/getById?id=${id}`)
+      .get(`https://django-employee-project.onrender.com/getById?id=${id}`)
       .then((response) => setEmployee(response.data))
       .catch((error) => alert(error.message || 'Something went wrong'));
   }, [id]);
@@ -39,7 +39,7 @@ function EmployeeProfile() {
     }
 
     axios
-      .put("http://localhost:8080/update", {
+      .put("https://django-employee-project.onrender.com/update", {
         id: employee.id,
         name: employee.name,
         email: employee.email,

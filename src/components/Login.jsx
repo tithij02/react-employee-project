@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8080/login",
+      .post("https://django-employee-project.onrender.com/login",
          {
         email: loginForm.email,
         password: loginForm.password

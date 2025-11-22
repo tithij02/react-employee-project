@@ -8,7 +8,7 @@ function EmployeeDashboard() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/getAll')
+      .get('https://django-employee-project.onrender.com/getAll')
       .then((response) => {
         setEmployees(response.data);
       })
@@ -20,7 +20,7 @@ function EmployeeDashboard() {
   const deleteEmployee = (id) => {
     if (window.confirm('Are you sure you want to delete this employee?')) {
       axios
-        .delete(`http://localhost:8080/delete?id=${id}`)
+        .delete(`https://django-employee-project.onrender.com/delete?id=${id}`)
         .then((response) => {
           if (response.data === true) {
             alert('Employee Deleted Successfully!');

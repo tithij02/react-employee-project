@@ -29,7 +29,7 @@ const RegisterPage = () => {
 
     axios
     
-      .post("http://localhost:8080/register", {
+      .post("https://django-employee-project.onrender.com/register", {
         name: registerForm.name,
         email: registerForm.email,
         password: registerForm.password
